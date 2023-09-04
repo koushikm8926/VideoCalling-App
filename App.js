@@ -1,19 +1,15 @@
 import { FlatList, SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import ContactScreen from './src/screens/ContactScreen'
 
-const contacts =["koushik", "rahul", "mohit"]
 
 const App = () => {
   return (
-    <SafeAreaView>
+    <SafeAreaView >
       <StatusBar barStyle={'default'} />
-      <FlatList
-      data={contacts}
-      renderItem={({item})=>(<Text>{item}</Text>)}/>
+      <ContactScreen/>
     </SafeAreaView>
   )
 }
 
 export default App
-
-const styles = StyleSheet.create({})
