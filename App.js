@@ -2,13 +2,14 @@ import { FlatList, SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react
 import React from 'react'
 import ContactScreen from './src/screens/ContactScreen'
 import CallingScreen from './src/screens/CallingScreen'
-
+import IncomingCallScreen from './src/screens/IncomingCall Screen'
 const App = () => {
   return (
-    <SafeAreaView >
+    <>
       <StatusBar barStyle={'default'} />
-      <CallingScreen/>
-    </SafeAreaView>
+      <IncomingCallScreen/>
+    </>
+   
   )
 }
 
