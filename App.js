@@ -7,7 +7,7 @@ const App = () => {
   return (
     <>
       <StatusBar barStyle={'default'} />
-      <IncomingCallScreen/>
+      <CallingScreen/>
     </>
    
   )
