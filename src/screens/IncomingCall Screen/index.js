@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, ImageBackground } from 'react-native'
+import { StyleSheet, Text, View, ImageBackground, Pressable, Alert } from 'react-native'
 import React from 'react'
 import ios_bg from '../../../assets/Images/ios_bg.jpg'
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -6,8 +6,14 @@ import Entypo from 'react-native-vector-icons/Entypo';
 import Feather from 'react-native-vector-icons/Feather';
 
 const IncomingCallScreen = () => {
+
+  const onAccept=()=>{
+    console.warn("on accept pressed");
+  };
+  const onDecline=()=>{
+    console.warn("on decline pressed");
+  };
   return (
-   
       <ImageBackground source={ios_bg} style={styles.bg} resizeMode='cover'  blurRadius={1}>
         <Text style={styles.name}>Rahul</Text>
         <Text style={styles.phoneNumber}>WhatsApp Video ...</Text>
@@ -25,21 +31,24 @@ const IncomingCallScreen = () => {
 
 
         <View style={styles.row}>
-          <View style={styles.IconsContainer}>
+          {/* this is decline button */}
+
+          <Pressable style={styles.IconsContainer} onPress={onDecline}>
             <View style={styles.IconButtonContainer}>
               <Feather name="x" color="white" size={40} />
             </View>
             <Text style={styles.iconText}>Decline</Text>
-          </View>
-          <View style={styles.IconsContainer}>
+          </Pressable>
+
+          {/* this is accept  button */}
+          <Pressable style={styles.IconsContainer} onPress={onAccept}> 
             <View style={[styles.IconButtonContainer, {backgroundColor:'blue'}]}>
                <Feather name="check" color="white" size={40} />
             </View>
             <Text style={styles.iconText}>Accept</Text>
-          </View>
+          </Pressable>
+
         </View>
-
-
       </ImageBackground>
     
   )
@@ -59,10 +68,10 @@ phoneNumber:{
     fontSize:20,
 }, 
 bg:{
-  height:'100%',
-  width:'100%',
   flex:1,
   alignItems:'center',
+  paddingBottom:50,
+  padding:10,
 },
 row:{
   flexDirection:'row',
