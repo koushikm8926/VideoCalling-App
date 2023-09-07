@@ -10,7 +10,7 @@ import Navigation from './src/navigation'
 const App = () => {
   return (
     <>
-      <StatusBar barStyle={'dark-content'} />
+      <StatusBar barStyle={'auto'} />
       <Navigation/>
     </>
    
