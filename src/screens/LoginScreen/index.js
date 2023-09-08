@@ -13,7 +13,7 @@ const LoginScreen = () => {
 
     return (
     <View style={styles.page}>
-     <TextInput placeholder='Username' style={styles.input} value={username} onChangeText={setUserName}  autoCapitalize="none/>
+     <TextInput placeholder='Username' style={styles.input} value={username} onChangeText={setUserName}  autoCapitalize='none'/>
      <TextInput placeholder='Password' style={styles.input} value={password} onChangeText={setPassword} secureTextEntry/>     
      <Pressable style={styles.button} onPress={signIn}><Text>Signin</Text></Pressable>
     </View>
